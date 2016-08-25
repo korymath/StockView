@@ -10,6 +10,7 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "scripts/third-party/jquery.js",
       "scripts/chromereload.js",
       "scripts/background.js"
     ]
@@ -29,6 +30,7 @@
         "*://*.twitter.com/*"
       ],
       "js": [
+        "scripts/third-party/jquery.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
