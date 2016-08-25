@@ -11,7 +11,8 @@
   "background": {
     "scripts": [
       "scripts/chromereload.js",
-      "scripts/background.js"
+      "scripts/background.js",
+      "https://npmcdn.com/babel-core@5.8.38/browser.min.js"
     ]
   },
   "permissions": [
@@ -23,13 +24,14 @@
     "page": "options.html",
     "chrome_style": true
   },
+  "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self']",
   "content_scripts": [
     {
       "matches": [
         "*://*.twitter.com/*"
       ],
       "js": [
-        "scripts/load.js"
+        "scripts/load.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
