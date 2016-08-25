@@ -25,6 +25,7 @@
     "page": "options.html",
     "chrome_style": true
   },
+  "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self']",
   "content_scripts": [
     {
       "matches": [

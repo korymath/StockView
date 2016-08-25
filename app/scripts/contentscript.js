@@ -1,3 +1,3 @@
-'use strict';
-
-console.log('\'Allo \'Allo! Content script');
+chrome.runtime.sendMessage({symbol: "TWRR"}, function(response) {
+  console.log(response);
+});
