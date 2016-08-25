@@ -1,3 +1,13 @@
+window.onpushstate = function (event) {
+    //Track for event changes here and 
+    //send an intimation to background page to inject code again
+    chrome.extension.sendMessage("Rerun script");
+    console.log("rerunning...");
+    alert("rerunning");
+};
+
+
+
 // get the url
 // !! This should run on every url change, not just browser reload !!
 
