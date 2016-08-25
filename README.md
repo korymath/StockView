@@ -7,4 +7,4 @@ Now, when you search Twitter for cashtags like '$TWTR', the stock chart will be 
 
 Before
 ==========
-![alt tag](/images/before.png)
+![alt tag](app/images/before.png)
