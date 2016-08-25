@@ -29,6 +29,7 @@
         "*://*.twitter.com/*"
       ],
       "js": [
+        "scripts/load.js"
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
