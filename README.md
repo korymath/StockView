@@ -1,2 +1,12 @@
 # StockView
-Twitter's what's happening, but not so much for stocks. Now, when you search Twitter web for terms such as "$TWTR", you'll be welcomed by a pretty graph of the stock!
+Twitter can tell us what's happening, but it is not great for finding business information.
+
+With this extension, you will be able to see live stock information right in your Twitter feed providing context for the current discussion.
+
+Now, when you search Twitter for cashtags like '$TWTR', the stock chart will be displayed so you can really know what is happening.
+
+Before
+==========
+Company is suggested and several recent tweets are listed!
+
+![before picture](app/images/before.png)
