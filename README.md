@@ -12,11 +12,12 @@ Now, when you search Twitter for cashtags like '$TWTR', the stock chart will be 
 Amusingly "For regular Windows users who are not skilled with computers, it is practically not possible to install and use extensions from outside the Chrome Web Store." -- http://stackoverflow.com/questions/24577024/install-chrome-extension-not-in-the-store
 
 If you are not using a windows machine: 
-Extensions can be loaded in unpacked mode by following the following steps:
-Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
-Enable Developer mode by ticking the checkbox in the upper-right corner.
-Click on the "Load unpacked extension..." button.
-Select the directory containing your unpacked extension.
+
+1. Extensions can be loaded in unpacked mode by following the following steps:
+2. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
+3. Enable Developer mode by ticking the checkbox in the upper-right corner.
+4. Click on the "Load unpacked extension..." button.
+5. Select the directory containing your unpacked extension.
 
 Development Screenshots
 
