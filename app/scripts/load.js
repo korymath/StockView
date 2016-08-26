@@ -13,7 +13,7 @@ var onRightPage = /twitter.com\/search/.test(url);
 
 if (onRightPage) {
 	function buildChartDiv() {
-		var stockchartStr = '<div id="stockchart" class="AdaptiveStreamUserGallery AdaptiveSearchTimeline-separationModule js-stream-item"><div class="app tweet js-actionable-user js-actionable-tweet js-original-tweet has-cards with-social-proof logged-in js-initial-focus focus ProfileCard">loading...</div></div>';
+		var stockchartStr = '<h3 class="AdaptiveSearchPage-moduleTitle">#StockView</h3><div id="stockchart" class="AdaptiveStreamUserGallery AdaptiveSearchTimeline-separationModule js-stream-item"><div class="app tweet js-actionable-user js-actionable-tweet js-original-tweet has-cards with-social-proof logged-in js-initial-focus focus ProfileCard">loading...</div></div>';
 		stockchartHTML = $.parseHTML(stockchartStr);
 		return stockchartHTML;
 	};
