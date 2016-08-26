@@ -4,7 +4,7 @@ var onRightPage = /twitter\.com\/search/.test(url);
 
 if (onRightPage) {
 	function buildChartDiv() {
-		var stockchartStr = '<div class="AdaptiveSearchPage-moduleHeader"><h3 class="AdaptiveSearchPage-moduleTitle"> #StockView </h3></div><div id="stockchart" class="AdaptiveStreamUserGallery AdaptiveSearchTimeline-separationModule js-stream-item"><div class="app tweet js-actionable-user js-actionable-tweet js-original-tweet has-cards with-social-proof logged-in js-initial-focus focus ProfileCard">loading...</div></div>';
+		var stockchartStr = '<div class="AdaptiveSearchPage-moduleHeader" style="border: none !important;"><h3 class="AdaptiveSearchPage-moduleTitle"> #StockView </h3></div><div id="stockchart" style="border-radius: 6px; border: 1px solid #e1e8ed; padding: 1px; overflow: hidden;" class="AdaptiveStreamUserGallery AdaptiveSearchTimeline-separationModule js-stream-item"><div class="app tweet js-actionable-user js-actionable-tweet js-original-tweet has-cards with-social-proof logged-in js-initial-focus focus ProfileCard">loading...</div></div>';
 		stockchartHTML = $.parseHTML(stockchartStr);
 		return stockchartHTML;
 	};
@@ -24,9 +24,11 @@ if (onRightPage) {
 	function setup_chart(id) {
 	  // Create the chart
 	  chart = $(id).highcharts('StockChart', {
-	    rangeSelector: {
-	        selected: 2,
-	        buttons: [
+		  	chart: { style: { fontFamily: ''} },
+			colors: ['#68E090','#FFD03F','#F6809A','#A37CED','#FF8D57','#71C9F8'],
+		   rangeSelector: {
+				selected: 2,
+				buttons: [
 	            {type: 'week', count: 1,  text: '1w'},
 	            {type: 'month', count: 1,  text: '1m'},
 	            {type: 'month', count: 3,  text: '3m'},
@@ -36,6 +38,7 @@ if (onRightPage) {
 	        ]
 	    }
 	  });
+	  $("#highcharts-0 > svg > text").hide();
 	};
 
 	function add_series(ticker) {
