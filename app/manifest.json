@@ -33,7 +33,7 @@
       ],
       "js": [
         "scripts/libs/jquery-3.1.0.min.js",
-        "scripts/contentscript.js"
+        "scripts/contentscript.js",
         "scripts/highstock.js",
         "scripts/exporting.js",
         "scripts/load.js"
