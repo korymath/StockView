@@ -25,7 +25,6 @@ function printMatches() {
 	console.log('i made it');
 	return matches
 };
-printMatches();
 
 function renderMatches() {
 	if ($('#stockchart').length < 1) {
@@ -39,6 +38,8 @@ function renderMatches() {
 	console.log('made a nice image')
 }
 
+matches = printMatches();
+renderMatches();
 /*
 $(".AdaptiveSearchTitle-title").on({
 	change: function() {
