@@ -35,6 +35,7 @@ function onRequest(request, sender, callback) {
   });
 }
 chrome.extension.onRequest.addListener(onRequest);
+
 // function requestFunc() {
 //    jQuery.ajax({
 //       type: 'GET',
@@ -45,4 +46,3 @@ chrome.extension.onRequest.addListener(onRequest);
 //        }
 //    });
 // }
-

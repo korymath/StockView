@@ -44,6 +44,7 @@ if (onRightPage) {
 	  });
 	};
 
+<<<<<<< HEAD
 	function add_series(ticker) {
 		if(ticker[0] == '$') {
         	ticker = ticker.substring(1);
@@ -66,6 +67,38 @@ if (onRightPage) {
 	        })
 	    });
 	};
+=======
+function chrome_getJSON (url, callback) {
+  console.log("sending chrome_getJSON");
+  // optional string extensionId, any request, optional function responseCallback
+  chrome.extension.sendRequest(url, callback);
+}
+
+matches = printMatches();
+renderMatches(matches);
+chrome_getJSON('urlStr', 'callbackStr')
+
+// $(function () {e
+//     chrome_getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+//         // Create the chart
+//         $('#stockchart').highcharts('StockChart', {
+//             rangeSelector : {
+//                 selected : 1
+//             },
+//             title : {
+//                 text : 'AAPL Stock Price'
+//             },
+//             series : [{
+//                 name : 'AAPL',
+//                 data : data,
+//                 tooltip: {
+//                     valueDecimals: 2
+//                 }
+//             }]
+//         });
+//     });
+// });
+>>>>>>> 22a193392cff8bb1e5e82ed8c70b4911204012ad
 
 	function getCashtags() {
 		var searchQuery = $(".AdaptiveSearchTitle-title")[0].innerText;
