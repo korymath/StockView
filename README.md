@@ -1,4 +1,7 @@
 # StockView
+
+[go/StockView](http://go/stockview)
+
 Twitter can tell us what's happening, but it is not great for finding business information.
 
 With this extension, you will be able to see live stock information right in your Twitter feed providing context for the current discussion.
