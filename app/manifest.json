@@ -10,10 +10,11 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/libs/jquery-3.1.0.slim.min.js",
+      "scripts/libs/jquery-3.1.0.min.js",
       "scripts/chromereload.js",
       "scripts/background.js"
     ]
+    // "page": "background.html"
   },
   "permissions": [
     "tabs",
@@ -31,10 +32,12 @@
         "*://*.twitter.com/*"
       ],
       "js": [
-        "scripts/libs/jquery-3.1.0.slim.min.js",
+        "scripts/libs/jquery-3.1.0.min.js",
         "scripts/load.js",
         "scripts/contentscript.js",
-        "scripts/injectcontent.js"
+        // "scripts/injectcontent.js",
+        "scripts/highstock.js",
+        "scripts/exporting.js"
       ],
       "run_at": "document_end",
       "all_frames": false

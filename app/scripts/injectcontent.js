@@ -17,3 +17,26 @@
 // //     // Or if you're using jQuery 1.8+:
 // //     $($.parseHTML(data)).appendTo('body');
 // // });
+
+console.log('help im trapped deep in the functions')
+
+$(function () {
+    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+        // Create the chart
+        $('#stockchart').highcharts('StockChart', {
+            rangeSelector : {
+                selected : 1
+            },
+            title : {
+                text : 'AAPL Stock Price'
+            },
+            series : [{
+                name : 'AAPL',
+                data : data,
+                tooltip: {
+                    valueDecimals: 2
+                }
+            }]
+        });
+    });
+});

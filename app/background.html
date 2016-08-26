@@ -1,0 +1,26 @@
+<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
+<script>
+	function onRequest(request, sender, callback) {
+	  if (request.action == 'getJSON') {
+		console.log('I made it 1.')
+		$.getJSON(request.url, callback);
+		console.log('I made it 2.')
+	  }
+	}
+	chrome.extension.onRequest.addListener(onRequest);
+
+	chrome.runtime.onInstalled.addListener(function (details) {
+  console.log('previousVersion', details.previousVersion);
+});
+
+chrome.tabs.onUpdated.addListener(function (tabId) {
+  chrome.pageAction.show(tabId);
+});
+
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+  chrome.tabs.executeScript({
+    file: "scripts/load.js"
+  });
+});
+
+</script>

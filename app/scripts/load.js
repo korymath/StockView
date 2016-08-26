@@ -6,8 +6,6 @@ window.onpushstate = function (event) {
     alert("rerunning");
 };
 
-
-
 // get the url
 // !! This should run on every url change, not just browser reload !!
 
@@ -22,24 +20,56 @@ function printMatches() {
 	var cashtagRegex = /\$[A-Za-z]{1,5}/g;
 	var matches = searchQuery.match(cashtagRegex);
 	console.log(matches);
-	console.log('i made it');
 	return matches
 };
 
-function renderMatches() {
+function buildOutput(symbol) {
+	var stockchartStr = '<div id="stockchart" class="AdaptiveStreamUserGallery AdaptiveSearchTimeline-separationModule js-stream-item"><div class="app tweet js-actionable-user js-actionable-tweet js-original-tweet has-cards with-social-proof logged-in js-initial-focus focus ProfileCard"><img id="single_chart_image" src="https://chart.finance.yahoo.com/z?s=' + symbol + '&t=6m&q=l&l=on&z=s&p=m50,m200" /></div></div>'
+	stockchartHTML = $.parseHTML(stockchartStr)
+	return stockchartHTML
+}
+
+function renderMatches(matches) {
 	if ($('#stockchart').length < 1) {
-		var stockchart = document.createElement('div');
-		stockchart.id = "stockchart"
+		var timeline = document.getElementById("timeline");
+		symbol = matches[0].replace('$','')
+		imNode = buildOutput(symbol)
+		$('#timeline').prepend(imNode)
 	}
-	$('#stockchart').append('<img id="chart" src="http://chart.finance.yahoo.com/z?s=TWTR&t=6m&q=l&l=on&z=s&p=m50,m200" />');
-	var timeline = document.getElementById("timeline");
-	var main_content = document.getElementById("content-main-heading")
-	timeline.insertBefore(stockchart, main_content);
-	console.log('made a nice image')
+}
+
+function chrome_getJSON (url, callback) {
+  console.log("sending chrome_getJSON");
+  chrome.extension.sendRequest({action:'getJSON',url:url}, callback);
 }
 
 matches = printMatches();
-renderMatches();
+renderMatches(matches);
+chrome_getJSON()
+
+// $(function () {
+//     chrome_getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+//         // Create the chart
+//         $('#stockchart').highcharts('StockChart', {
+//             rangeSelector : {
+//                 selected : 1
+//             },
+//             title : {
+//                 text : 'AAPL Stock Price'
+//             },
+//             series : [{
+//                 name : 'AAPL',
+//                 data : data,
+//                 tooltip: {
+//                     valueDecimals: 2
+//                 }
+//             }]
+//         });
+//     });
+// });
+
+// niceData = getniceDataChart()
+// console.log(niceData)
 /*
 $(".AdaptiveSearchTitle-title").on({
 	change: function() {
