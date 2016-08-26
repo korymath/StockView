@@ -1,13 +1,5 @@
 'use strict';
 
-chrome.runtime.onInstalled.addListener(function (details) {
-  console.log('previousVersion', details.previousVersion);
-});
-
-chrome.tabs.onUpdated.addListener(function (tabId) {
-  chrome.pageAction.show(tabId);
-});
-
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     console.log(sender.tab ?
@@ -18,5 +10,10 @@ chrome.runtime.onMessage.addListener(
       sendResponse(data);
     });
     return true;
-  });
+});
 
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+  chrome.tabs.executeScript({
+    file: "scripts/load.js"
+  });
+});

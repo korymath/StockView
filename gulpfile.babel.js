@@ -80,11 +80,11 @@ gulp.task('chromeManifest', () => {
 });
 
 gulp.task('babel', () => {
-  return gulp.src('app/scripts.babel/**/*.js')
-      .pipe($.babel({
-        presets: ['es2015']
-      }))
-      .pipe(gulp.dest('app/scripts'));
+  // return gulp.src('app/scripts.babel/**/*.js')
+  //     .pipe($.babel({
+  //       presets: ['es2015']
+  //     }))
+  //     .pipe(gulp.dest('app/scripts'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));

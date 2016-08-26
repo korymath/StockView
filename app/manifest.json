@@ -14,9 +14,11 @@
       "scripts/chromereload.js",
       "scripts/background.js"
     ]
+    // "page": "background.html"
   },
   "permissions": [
     "tabs",
+    "webNavigation",
     "http://*/*",
     "https://*/*"
   ],
@@ -24,7 +26,6 @@
     "page": "options.html",
     "chrome_style": true
   },
-  "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self']",
   "content_scripts": [
     {
       "matches": [
@@ -32,8 +33,10 @@
       ],
       "js": [
         "scripts/libs/jquery-3.1.0.min.js",
-        "scripts/load.js",
         "scripts/contentscript.js"
+        "scripts/highstock.js",
+        "scripts/exporting.js",
+        "scripts/load.js"
       ],
       "run_at": "document_end",
       "all_frames": false
@@ -42,6 +45,9 @@
   "omnibox": {
     "keyword": "OMNIBOX-KEYWORD"
   },
+  "web_accessible_resources": [
+    "popup.html"
+  ],
   "page_action": {
     "default_icon": {
       "19": "images/icon-19.png",
