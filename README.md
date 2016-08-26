@@ -1,4 +1,4 @@
-# StockView
+# \#StockView
 
 [go/StockView](http://go/stockview)
 
