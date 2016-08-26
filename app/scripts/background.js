@@ -14,8 +14,8 @@ chrome.runtime.onMessage.addListener(
                 "from a content script:" + sender.tab.url :
                 "from the extension");
     
-    $.get('http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%3D%22' + request.symbol + '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys', function(data) {
-      sendResponse({data : data});
+    $.get('http://chartapi.finance.yahoo.com/instrument/1.0/' + request.symbol + '/chartdata;type=quote;range=1d/json', function(data) {
+      sendResponse(data);
     });
     return true;
   });
