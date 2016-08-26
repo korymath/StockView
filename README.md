@@ -25,25 +25,25 @@ Before
 ==========
 Company is suggested, perhaps an account is shown and several recent tweets populate the timeline below.
 
-![before picture](app/images/before.png)
+<img src="app/images/before.png" width="50%">
 
 v1
 ==========
 Rough chart inserted nicely.
 
-![v1 picture](app/images/v1.png)
+<img src="app/images/v1.png" width="50%">
 
 v3
 ==========
 Beautiful chart comes in.
 
-![v2 picture](app/images/v3.png)
+<img src="app/images/v3.png" width="50%">
 
 v4
 ==========
 Multiple stock tickers.
 
-![v2 picture](app/images/v3.png)
+<img src="app/images/v4.png" width="50%">
 
 # Technology 
 
