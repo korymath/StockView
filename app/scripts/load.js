@@ -12,8 +12,19 @@ function printMatches() {
 	var cashtagRegex = /\$[A-Za-z]{1,5}/g;
 	var matches = searchQuery.match(cashtagRegex);
 	console.log(matches);
+	console.log('i made it');
 };
 printMatches();
+
+if ($('#stockchart').length < 1) {
+	var stockchart = document.createElement('div');
+	stockchart.id = "stockchart"
+}
+
+$('stockchart').append('<img id="chart" src="http://chart.finance.yahoo.com/z?s=TWTR&t=6m&q=l&l=on&z=s&p=m50,m200" />');
+var timeline = document.getElementById("timeline");
+var main_content = document.getElementById("content-main-heading")
+timeline.insertBefore(stockchart, main_content);
 
 /*
 $(".AdaptiveSearchTitle-title").on({

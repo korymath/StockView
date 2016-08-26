@@ -12,8 +12,7 @@
     "scripts": [
       "scripts/libs/jquery-3.1.0.slim.min.js",
       "scripts/chromereload.js",
-      "scripts/background.js",
-      "https://npmcdn.com/babel-core@5.8.38/browser.min.js"
+      "scripts/background.js"
     ]
   },
   "permissions": [
@@ -25,7 +24,6 @@
     "page": "options.html",
     "chrome_style": true
   },
-  "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self']",
   "content_scripts": [
     {
       "matches": [
@@ -34,7 +32,8 @@
       "js": [
         "scripts/libs/jquery-3.1.0.slim.min.js",
         "scripts/load.js",
-        "scripts/contentscript.js"
+        "scripts/contentscript.js",
+        "scripts/injectcontent.js",
       ],
       "run_at": "document_end",
       "all_frames": false
@@ -43,6 +42,9 @@
   "omnibox": {
     "keyword": "OMNIBOX-KEYWORD"
   },
+  "web_accessible_resources": [
+    "popup.html"
+  ],
   "page_action": {
     "default_icon": {
       "19": "images/icon-19.png",
