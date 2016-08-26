@@ -24,9 +24,11 @@ if (onRightPage) {
 	function setup_chart(id) {
 	  // Create the chart
 	  chart = $(id).highcharts('StockChart', {
+	  		exporting: { enabled: false },
 		  	chart: { style: { fontFamily: ''} },
 			colors: ['#68E090','#FFD03F','#F6809A','#A37CED','#FF8D57','#71C9F8'],
 		   rangeSelector: {
+		   	inputEnabled: false,
 				selected: 2,
 				buttons: [
 	            {type: 'week', count: 1,  text: '1w'},
@@ -36,9 +38,9 @@ if (onRightPage) {
 	            {type: 'ytd', text: 'YTD'},
 	            {type: 'all', text: 'All'}
 	        ]
-	    }
-	  });
-	  $("#highcharts-0 > svg > text").hide();
+	      }
+	   });
+	   $("svg > text").remove();
 	};
 
 	function add_series(ticker) {
