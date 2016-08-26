@@ -26,6 +26,7 @@ function onRequest(request, sender, callback) {
   });
 }
 chrome.extension.onRequest.addListener(onRequest);
+
 // function requestFunc() {
 //    jQuery.ajax({
 //       type: 'GET',
@@ -40,6 +41,6 @@ chrome.extension.onRequest.addListener(onRequest);
 
 chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
   chrome.tabs.executeScript({
-    file: "scripts/load.js"
+    file: "/scripts/load.js"
   });
 });

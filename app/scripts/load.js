@@ -40,14 +40,15 @@ function renderMatches(matches) {
 
 function chrome_getJSON (url, callback) {
   console.log("sending chrome_getJSON");
-  chrome.extension.sendRequest({action:'getJSON',url:url}, callback);
+  // optional string extensionId, any request, optional function responseCallback
+  chrome.extension.sendRequest(url, callback);
 }
 
 matches = printMatches();
 renderMatches(matches);
-chrome_getJSON()
+chrome_getJSON('urlStr', 'callbackStr')
 
-// $(function () {
+// $(function () {e
 //     chrome_getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
 //         // Create the chart
 //         $('#stockchart').highcharts('StockChart', {
