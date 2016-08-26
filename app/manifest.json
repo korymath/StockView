@@ -33,11 +33,9 @@
       ],
       "js": [
         "scripts/libs/jquery-3.1.0.min.js",
-        "scripts/load.js",
-        "scripts/contentscript.js",
-        // "scripts/injectcontent.js",
         "scripts/highstock.js",
-        "scripts/exporting.js"
+        "scripts/exporting.js",
+        "scripts/load.js"
       ],
       "run_at": "document_end",
       "all_frames": false

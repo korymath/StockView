@@ -1,8 +1,17 @@
 'use strict';
 
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+  chrome.tabs.executeScript({
+    file: "scripts/load.js"
+  });
+});
+
+/*
 chrome.runtime.onInstalled.addListener(function (details) {
   console.log('previousVersion', details.previousVersion);
 });
+*/
+
 chrome.tabs.onUpdated.addListener(function (tabId) {
   chrome.pageAction.show(tabId);
 });
@@ -37,9 +46,3 @@ chrome.extension.onRequest.addListener(onRequest);
 //    });
 // }
 
-
-chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
-  chrome.tabs.executeScript({
-    file: "scripts/load.js"
-  });
-});
