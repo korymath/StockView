@@ -16,7 +16,7 @@ function getTickerInfo(ticker, callback) {
 //});
 
 (function () {
-	var template = '<div id="company-popup"><div class="profile-card ProfileCard component profile-header hovercard gravity-south weight-left"><div class="hover-offset"><div class="arrow" style="background-color: #1B95E0"></div></div><div class="ProfileCard-bg CompanyCard" style="background-color: #1B95E0;position: relative;"><div class="company-name">{NAME}</div><div class="company-ticker">{TICKER}</div><div class="company-current-price">{PRICE}</div><div class="company-delta dela-{DETA_TYPE}">{DELTA}</div><div class="company-last-sync-time">{LAST_SYNC}</div></div><div class="ProfileCard-content" ><div class="bio-container">CHARD GOEZ HEAR</div></div></div></div>';
+	var template = '<div id="company-popup"><div class="profile-card ProfileCard component profile-header hovercard gravity-south weight-left"><div class="hover-offset"><div class="arrow" style="background-color: #1B95E0"></div></div><div class="ProfileCard-bg CompanyCard" style="background-color: #1B95E0;position: relative;"><div class="company-name">{NAME}</div><div class="company-ticker">{TICKER}</div><div class="company-current-price">{PRICE}</div><div class="company-delta dela-{DETA_TYPE}">{DELTA}</div><div class="company-last-sync-time">{LAST_SYNC}</div></div></div></div>';
 	var css = '.CompanyCard{color:#fff;padding:1em}.company-ticker{font-size:2em;position:absolute;bottom:40px}.company-current-price{position:absolute;right:70px;bottom:40px;font-size:2em}.company-delta{position:absolute;bottom:35px;right:20px}.dela-positive{color:#8ECF61}.dela-negative{color:#ED3B3B}.company-last-sync-time{position:absolute;bottom:5px;color:#eee;right:10px;font-size:.7em;text-transform:uppercase}';
 
 	var popup = null;
