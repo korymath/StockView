@@ -33,11 +33,17 @@ Rough chart inserted nicely.
 
 ![v1 picture](app/images/v1.png)
 
-Before
+v3
 ==========
 Beautiful chart comes in.
 
-![v3 picture](app/images/v3.png)
+![v2 picture](app/images/v3.png)
+
+v4
+==========
+Multiple stock tickers.
+
+![v2 picture](app/images/v3.png)
 
 # Technology 
 
