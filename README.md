@@ -9,10 +9,10 @@ Now, when you search Twitter for cashtags like '$TWTR', the stock chart will be 
 
 # Install
 
-\#StockView is packaged as a chrome extension. You can download it here https://github.com/korymath/StockView/raw/master/app.crx and install it under developer mode.
+\#StockView is packaged as a chrome extension. You can download it here https://github.com/korymath/StockView/raw/master/app.crx.
 
-How to install:
-Just open extensions in chrome (Settings->More tools->Extensions) and drag and drop .crx file and you are good to go.
+To install, you should just drag 'n' drop the .crx file into Chrome.
+In Chrome, open Extensions tab (chrome://extensions), drag 'n' drop the .crx file and you are good to go.
 
 Amusingly "for regular Windows users who are not skilled with computers, it is practically not possible to install and use extensions from outside the Chrome Web Store." -- http://stackoverflow.com/questions/24577024/install-chrome-extension-not-in-the-store
 
