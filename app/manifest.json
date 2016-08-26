@@ -33,7 +33,7 @@
         "scripts/libs/jquery-3.1.0.slim.min.js",
         "scripts/load.js",
         "scripts/contentscript.js",
-        "scripts/injectcontent.js",
+        "scripts/injectcontent.js"
       ],
       "run_at": "document_end",
       "all_frames": false

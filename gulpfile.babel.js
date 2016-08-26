@@ -79,13 +79,13 @@ gulp.task('chromeManifest', () => {
   .pipe(gulp.dest('dist'));
 });
 
-gulp.task('babel', () => {
-  return gulp.src('app/scripts.babel/**/*.js')
-      .pipe($.babel({
-        presets: ['es2015']
-      }))
-      .pipe(gulp.dest('app/scripts'));
-});
+// gulp.task('babel', () => {
+//   return gulp.src('app/scripts.babel/**/*.js')
+//       .pipe($.babel({
+//         presets: ['es2015']
+//       }))
+//       .pipe(gulp.dest('app/scripts'));
+// });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 

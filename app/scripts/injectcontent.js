@@ -5,10 +5,10 @@ console.log('i made it');
 if ($('#stockchart').length < 1) {
 	var stockchart = document.createElement('div');
 	stockchart.id = "stockchart"
-} else {
-	if
 }
-$('stockchart').append('<img id="chart" src="http://chart.finance.yahoo.com/z?s=TWTR&t=6m&q=l&l=on&z=s&p=m50,m200" />');
+
+$('#stockchart').append('<img id="chart" src="http://chart.finance.yahoo.com/z?s=TWTR&t=6m&q=l&l=on&z=s&p=m50,m200" />');
+
 var timeline = document.getElementById("timeline");
 var main_content = document.getElementById("content-main-heading")
 timeline.insertBefore(stockchart, main_content);
