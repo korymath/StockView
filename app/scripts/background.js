@@ -1,5 +1,12 @@
 'use strict';
 
+console.log("ASD");
+
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+	chrome.tabs.executeScript({
+		file: "scripts/main.js"
+	});
+});
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     console.log(sender.tab ?
@@ -10,10 +17,4 @@ chrome.runtime.onMessage.addListener(
       sendResponse(data);
     });
     return true;
-});
-
-chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
-  chrome.tabs.executeScript({
-    file: "scripts/load.js"
-  });
 });

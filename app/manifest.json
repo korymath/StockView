@@ -36,7 +36,7 @@
         "scripts/contentscript.js",
         "scripts/highstock.js",
         "scripts/exporting.js",
-        "scripts/load.js"
+        "scripts/main.js"
       ],
       "run_at": "document_end",
       "all_frames": false
