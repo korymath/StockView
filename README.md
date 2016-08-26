@@ -5,6 +5,8 @@ With this extension, you will be able to see live stock information right in you
 
 Now, when you search Twitter for cashtags like '$TWTR', the stock chart will be displayed so you can really know what is happening.
 
+<img src="app/images/demo-vid.gif" width="50%">
+
 # Install
 
 \#StockView is packaged as a chrome extension. You can download it here https://github.com/korymath/StockView/raw/master/app.crx and install it under developer mode.
@@ -40,4 +42,5 @@ Multiple stock tickers.
 # Technology 
 
 Highstocks for plotting http://www.highcharts.com/
+
 Data comes from Yahoo historical stock API
