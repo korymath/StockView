@@ -35,7 +35,7 @@
         "scripts/libs/jquery-3.1.0.min.js",
         "scripts/highstock.js",
         "scripts/exporting.js",
-        "scripts/load.js"
+        "scripts/main.js"
       ],
       "run_at": "document_end",
       "all_frames": false
