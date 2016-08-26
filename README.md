@@ -25,13 +25,13 @@ Rough chart inserted nicely.
 
 <img src="app/images/v1.png" width="50%">
 
-v3
+v2
 ==========
 Beautiful chart comes in.
 
 <img src="app/images/v3.png" width="50%">
 
-v4
+v3
 ==========
 Multiple stock tickers.
 
