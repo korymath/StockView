@@ -7,9 +7,9 @@ Now, when you search Twitter for cashtags like '$TWTR', the stock chart will be 
 
 # Install
 
-\#StockView is packaged as a chrome extension. You can download it here, and then follow these steps to install an extension from source.
+\#StockView is packaged as a chrome extension. You can download it here (ADD A LINK), and then follow these steps to install an extension from source.
 
-Amusingly "For regular Windows users who are not skilled with computers, it is practically not possible to install and use extensions from outside the Chrome Web Store." -- http://stackoverflow.com/questions/24577024/install-chrome-extension-not-in-the-store
+Amusingly "for regular Windows users who are not skilled with computers, it is practically not possible to install and use extensions from outside the Chrome Web Store." -- http://stackoverflow.com/questions/24577024/install-chrome-extension-not-in-the-store
 
 If you are not using a windows machine: 
 
